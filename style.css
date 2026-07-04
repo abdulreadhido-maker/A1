@@ -1,230 +1,210 @@
-/* =========================
-   Torrema Main Style
-========================= */
+/* --- إضافات وتنسيقات الصفحة الرئيسية index.html --- */
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:"Cairo",sans-serif;
+/* تنسيق قسم الـ Hero */
+.main-hero {
+    padding: 80px 8%;
+    background: linear-gradient(135deg, var(--bg-main) 0%, var(--bg-sub) 100%);
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
 }
 
-body{
-    background:#f4f4f4;
-    color:#222;
+.hero-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 50px;
 }
 
-/* Header */
-
-header{
-    width:100%;
-    height:80px;
-    background:#111;
-    color:#fff;
-
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-
-    padding:0 60px;
+.hero-text-side {
+    flex: 1;
+    max-width: 600px;
 }
 
-.logo h1{
-    font-size:32px;
+.announcement-badge {
+    display: inline-block;
+    background: #fff;
+    border: 1px solid var(--neon-cyan);
+    color: var(--text-dark);
+    padding: 6px 16px;
+    border-radius: 30px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px var(--neon-glow);
 }
 
-nav{
-    display:flex;
-    gap:30px;
+.main-hero h1 {
+    font-size: 3rem;
+    font-weight: 900;
+    line-height: 1.3;
+    margin-bottom: 20px;
 }
 
-nav a{
-    color:white;
-    text-decoration:none;
-    transition:.3s;
+.hero-desc {
+    font-size: 1.1rem;
+    color: #475569;
+    margin-bottom: 35px;
+    line-height: 1.7;
 }
 
-nav a:hover{
-    color:#bdbdbd;
+.hero-cta-zone {
+    display: flex;
+    gap: 15px;
 }
 
-/* Buttons */
-
-.header-buttons{
-    display:flex;
-    gap:15px;
+.btn-neon-secondary {
+    background: transparent;
+    color: var(--text-dark);
+    border: 2px solid var(--text-dark);
+    padding: 14px 28px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: var(--transition-smooth);
+    text-decoration: none;
 }
 
-.btn{
-    padding:10px 22px;
-    border-radius:8px;
-    text-decoration:none;
-    transition:.3s;
+.btn-neon-secondary:hover {
+    border-color: var(--neon-cyan);
+    color: var(--neon-cyan);
+    box-shadow: 0 0 15px var(--neon-glow);
 }
 
-.login-btn{
-    background:white;
-    color:black;
+/* الجانب المرئي والإحصائيات التفاعلية */
+.hero-visual-side {
+    flex: 1;
+    display: flex;
+    justify-content: center;
 }
 
-.register-btn{
-    background:#555;
-    color:white;
+.stat-glass-card {
+    background: rgba(255, 255, 255, 0.85);
+    border: 2px solid #fff;
+    border-radius: 24px;
+    padding: 30px;
+    width: 280px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.05), 0 0 20px rgba(0, 243, 255, 0.05);
 }
 
-.login-btn:hover,
-.register-btn:hover{
-    opacity:.8;
+.stat-header {
+    display: flex;
+    justify-content: space-between;
+    color: #64748b;
+    font-size: 0.9rem;
+    font-weight: bold;
 }
 
-/* Hero */
-
-.hero{
-    height:90vh;
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-
-    background:linear-gradient(135deg,#111,#444,#888);
-    color:white;
+.stat-number {
+    font-size: 3rem;
+    font-weight: 900;
+    color: var(--text-dark);
+    margin: 15px 0 5px;
 }
 
-.hero-content{
-    width:800px;
+/* أنيميشن الطفو الخفيف للكرت */
+.floating-animation {
+    animation: floatEffect 4s ease-in-out infinite;
 }
 
-.hero h2{
-    font-size:50px;
-    margin-bottom:20px;
+@keyframes floatEffect {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
 }
 
-.hero p{
-    font-size:22px;
-    margin-bottom:30px;
+/* قسم المميزات */
+.features-section {
+    padding: 80px 8%;
+    background: var(--bg-main);
 }
 
-.hero-btn{
-
-    display:inline-block;
-
-    padding:15px 35px;
-
-    background:white;
-
-    color:black;
-
-    text-decoration:none;
-
-    border-radius:10px;
-
-    font-weight:bold;
-
-    transition:.3s;
-
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
 }
 
-.hero-btn:hover{
-
-    transform:scale(1.05);
-
+.section-title h2 {
+    font-size: 2.2rem;
+    font-weight: 900;
 }
 
-/* Services */
-
-.services{
-
-    width:90%;
-
-    margin:80px auto;
-
-    display:grid;
-
-    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-
-    gap:30px;
-
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
 }
 
-.service-card{
-
-    background:white;
-
-    padding:35px;
-
-    border-radius:15px;
-
-    text-align:center;
-
-    box-shadow:0 10px 25px rgba(0,0,0,.08);
-
-    transition:.3s;
-
+.feature-card {
+    text-align: center;
+    padding: 40px 30px;
 }
 
-.service-card:hover{
-
-    transform:translateY(-10px);
-
+.feat-icon {
+    font-size: 2.5rem;
+    color: var(--text-dark);
+    margin-bottom: 20px;
+    transition: var(--transition-smooth);
 }
 
-.service-card h3{
-
-    margin-bottom:20px;
-
+.feature-card:hover .feat-icon {
+    color: var(--neon-cyan);
+    transform: scale(1.1);
 }
 
-/* Footer */
-
-footer{
-
-    background:#111;
-
-    color:white;
-
-    text-align:center;
-
-    padding:25px;
-
-    margin-top:70px;
-
+/* شريط الإلحاح السفلي المتثبت (Urgency Sticky Bar) */
+.urgency-sticky-bar {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--text-dark);
+    color: #fff;
+    padding: 12px 30px;
+    border-radius: 50px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2), 0 0 20px var(--neon-glow);
+    border: 1px solid var(--neon-cyan);
+    z-index: 999;
 }
 
-/* Responsive */
-
-@media(max-width:900px){
-
-header{
-
-flex-direction:column;
-
-height:auto;
-
-padding:20px;
-
+.urgency-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
 
-nav{
-
-margin:20px 0;
-
-flex-wrap:wrap;
-
-justify-content:center;
-
+.urgency-content p {
+    margin: 0;
+    font-weight: bold;
+    font-size: 0.95rem;
 }
 
-.hero h2{
-
-font-size:36px;
-
+.btn-bar-action {
+    background: var(--neon-cyan);
+    color: var(--text-dark);
+    padding: 6px 16px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 900;
+    font-size: 0.85rem;
+    transition: var(--transition-smooth);
 }
 
-.hero p{
-
-font-size:18px;
-
+.btn-bar-action:hover {
+    background: #fff;
+    box-shadow: 0 0 10px #fff;
 }
 
+.btn-login {
+    color: var(--text-dark);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: var(--transition-smooth);
+}
+.btn-login:hover {
+    color: var(--neon-cyan);
 }
