@@ -1,140 +1,97 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>تفاصيل المنتج | Torrema</title>
-
+    <title>المتجر الرقمي المتكامل | حزم وأدوات مستقبلية</title>
     <link rel="stylesheet" href="css/style.css">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+<body class="neon-theme">
 
-<body>
-
-    <header>
-        <div class="logo">
-            <h1>Torrema</h1>
-        </div>
-        <nav>
+    <header class="main-header">
+        <div class="logo">متجر <span class="neon-text">STORE</span></div>
+        <nav class="nav-links">
             <a href="index.html">الرئيسية</a>
-            <a href="courses.html">التعليم</a>
-            <a href="shop.html" class="active">المتجر</a>
-            <a href="#">المقالات</a>
-            <a href="#">من نحن</a>
-            <a href="#">تواصل معنا</a>
+            <a href="shop.html" class="active-neon">المتجر</a>
+            <a href="courses.html">الكورسات</a>
+            <a href="lab.html" class="pulse-link">المختبر الرقمي ⚡</a>
         </nav>
-        <div class="header-buttons">
-            <a href="login.html" class="btn login-btn">تسجيل الدخول</a>
-            <a href="register.html" class="btn register-btn">إنشاء حساب</a>
+        <div class="header-actions">
+            <button class="btn-cart-toggle" id="cartToggleBtn">
+                <i class="fas fa-shopping-basket"></i> السلة 
+                <span class="cart-count-badge" id="cartCount">0</span>
+            </button>
         </div>
     </header>
 
-    <main class="product-details-container">
-        <div class="container product-wrapper">
-            
-            <div class="product-gallery">
-                <div class="main-image">
-                    <img src="" id="mainProductImg" alt="صورة المنتج الرئيسية">
-                </div>
-                <div class="thumbnail-images" id="productThumbnails">
-                    </div>
-            </div>
-
-            <div class="product-detailed-info">
-                <nav class="breadcrumb">
-                    <a href="shop.html">المتجر</a> / <span id="productCategory">...</span>
-                </nav>
-
-                <h2 id="productTitle">جاري تحميل اسم المنتج...</h2>
-                
-                <p class="developer-info">بواسطة: <span id="productDeveloper" class="dev-name">...</span></p>
-
-                <div class="rating-stock-row">
-                    <div class="rating" id="productRating">...</div>
-                    <span id="productStock" class="stock">...</span>
-                </div>
-
-                <hr class="divider">
-
-                <div class="product-purchase-section">
-                    <div class="price-box">
-                        <span class="price-label">السعر:</span>
-                        <span id="productPrice" class="main-price">...</span>
-                    </div>
-
-                    <div class="quantity-box">
-                        <label for="productQuantity">الكمية:</label>
-                        <input type="number" id="productQuantity" value="1" min="1" max="99">
-                    </div>
-                    
-                    <div class="action-buttons">
-                        <a href="#" id="checkoutBtn" class="checkout-btn">💳 شراء المنتج الآن</a>
-                        <a href="#" id="cartBtn" class="cart-btn">🛒 إضافة إلى السلة</a>
-                        <a href="#" id="livePreviewBtn" class="live-preview-btn">👁️ معاينة حية</a>
-                    </div>
-                </div>
-
-                <div class="share-product">
-                    <h4>مشاركة المنتج:</h4>
-                    <div class="share-links">
-                        <a href="#" class="share-link fb">Facebook</a>
-                        <a href="#" class="share-link x">X</a>
-                        <a href="#" class="share-link ln">LinkedIn</a>
-                    </div>
-                </div>
-            </div>
+    <section class="shop-hero">
+        <h1 class="fade-in-up">اكتشف منتجاتنا <span class="neon-glow">الرقمية</span></h1>
+        <p>اختر الأدوات والحزم الجاهزة التي تسرّع إنتاجيتك وترفع أرباحك.</p>
+        
+        <div class="shop-filter-bar">
+            <button class="shop-filter-btn active" data-shop-filter="all">كل المنتجات</button>
+            <button class="shop-filter-btn" data-shop-filter="templates">قوالب جاهزة</button>
+            <button class="shop-filter-btn" data-shop-filter="scripts">سكربتات وأكواد</button>
+            <button class="shop-filter-btn" data-shop-filter="e-books">كتب أدلة رقمية</button>
         </div>
+    </section>
 
-        <section class="product-tabs-section">
-            <div class="tabs-header">
-                <button class="tab-button active" data-tab="desc-tab">📄 الوصف</button>
-                <button class="tab-button" data-tab="specs-tab">⚙️ المواصفات</button>
-                <button class="tab-button" data-tab="reviews-tab">⭐ التقييمات</button>
-                <button class="tab-button" data-tab="files-tab">📦 الملفات المرفقة</button>
-            </div>
-
-            <div class="tabs-content">
-                <div id="desc-tab" class="tab-panel active">
-                    <h3>وصف المنتج</h3>
-                    <p id="tabDescText">جاري تحميل الوصف...</p>
+    <main class="shop-products-section">
+        <div class="shop-grid">
+            
+            <div class="shop-product-card glass-card" data-shop-category="templates">
+                <div class="product-thumb">
+                    <i class="fas fa-layer-group neon-text"></i>
                 </div>
-
-                <div id="specs-tab" class="tab-panel">
-                    <h3>المواصفات الفنية</h3>
-                    <ul class="specs-list" id="tabSpecsList"></ul>
-                    <div class="product-extra-info" id="tabExtraInfo"></div>
-                </div>
-
-                <div id="reviews-tab" class="tab-panel">
-                    <h3>آراء المشترين</h3>
-                    <div class="reviews-container" id="tabReviewsContainer"></div>
-                </div>
-
-                <div id="files-tab" class="tab-panel">
-                    <h3>الملفات المتضمنة في حزمة التحميل</h3>
-                    <ul class="files-list" id="tabFilesList"></ul>
+                <div class="product-details">
+                    <h3>حزمة قوالب SaaS الاحترافية</h3>
+                    <p>5 قوالب جاهزة تماماً ومصممة بتقنية الـ Glassmorphism لرفع اشتراكات موقعك.</p>
+                    <div class="product-bottom">
+                        <div class="product-price">149 ر.س</div>
+                        <button class="btn-add-to-cart-action" data-id="1" data-name="حزمة قوالب SaaS" data-price="149">إضافة <i class="fas fa-plus"></i></button>
+                    </div>
                 </div>
             </div>
-        </section>
 
-        <section class="related-products-section">
-            <h2>منتجات مشابهة قد تنال إعجابك</h2>
-            <div class="products-grid" id="relatedProductsGrid"></div>
-        </section>
+            <div class="shop-product-card glass-card" data-shop-category="scripts">
+                <div class="product-thumb">
+                    <i class="fas fa-terminal neon-text"></i>
+                </div>
+                <div class="product-details">
+                    <h3>بوابة دفع آلي متكاملة (سكربت)</h3>
+                    <p>كود نظيف جاهز للربط الفوري مع Stripe وPayPal متوافق مع كافة المنصات.</p>
+                    <div class="product-bottom">
+                        <div class="product-price">249 ر.س</div>
+                        <button class="btn-add-to-cart-action" data-id="2" data-name="بوابة دفع آلي متكاملة" data-price="249">إضافة <i class="fas fa-plus"></i></button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
     </main>
 
-    <footer>
-        <p>© 2026 Torrema - جميع الحقوق محفوظة.</p>
-    </footer>
+    <div class="side-cart-drawer" id="sideCartDrawer">
+        <div class="cart-drawer-header">
+            <h3><i class="fas fa-shopping-bag neon-text"></i> سلتك الرقمية</h3>
+            <button class="btn-close-cart" id="btnCloseCart">&times;</button>
+        </div>
+        
+        <div class="cart-drawer-body" id="cartDrawerItems">
+            <p class="empty-cart-msg">سلتك فارغة حالياً.. أضف بعض التميز! ✨</p>
+        </div>
+        
+        <div class="cart-drawer-footer">
+            <div class="cart-total-row">
+                <span>المجموع الإجمالي:</span>
+                <span class="total-amount-neon" id="cartTotalAmount">0 ر.س</span>
+            </div>
+            <a href="checkout.html" class="btn-checkout-now">الذهاب لإتمام الدفع السريع <i class="fas fa-credit-card"></i></a>
+        </div>
+    </div>
+    
+    <div class="cart-overlay" id="cartOverlay"></div>
 
-    <script src="js/script.js"></script>
-    <script src="js/product.js"></script>
-
+    <script src="js/shop.js"></script>
 </body>
-
 </html>
