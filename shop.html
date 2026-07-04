@@ -2,114 +2,138 @@
 <html lang="ar" dir="rtl">
 
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>متجر Torrema</title>
+    <title>تفاصيل المنتج | Torrema</title>
 
     <link rel="stylesheet" href="css/style.css">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-<header>
+    <header>
+        <div class="logo">
+            <h1>Torrema</h1>
+        </div>
+        <nav>
+            <a href="index.html">الرئيسية</a>
+            <a href="courses.html">التعليم</a>
+            <a href="shop.html" class="active">المتجر</a>
+            <a href="#">المقالات</a>
+            <a href="#">من نحن</a>
+            <a href="#">تواصل معنا</a>
+        </nav>
+        <div class="header-buttons">
+            <a href="login.html" class="btn login-btn">تسجيل الدخول</a>
+            <a href="register.html" class="btn register-btn">إنشاء حساب</a>
+        </div>
+    </header>
 
-    <div class="logo">
+    <main class="product-details-container">
+        <div class="container product-wrapper">
+            
+            <div class="product-gallery">
+                <div class="main-image">
+                    <img src="" id="mainProductImg" alt="صورة المنتج الرئيسية">
+                </div>
+                <div class="thumbnail-images" id="productThumbnails">
+                    </div>
+            </div>
 
-        <h1>Torrema</h1>
+            <div class="product-detailed-info">
+                <nav class="breadcrumb">
+                    <a href="shop.html">المتجر</a> / <span id="productCategory">...</span>
+                </nav>
 
-    </div>
+                <h2 id="productTitle">جاري تحميل اسم المنتج...</h2>
+                
+                <p class="developer-info">بواسطة: <span id="productDeveloper" class="dev-name">...</span></p>
 
-    <nav>
+                <div class="rating-stock-row">
+                    <div class="rating" id="productRating">...</div>
+                    <span id="productStock" class="stock">...</span>
+                </div>
 
-        <a href="index.html">الرئيسية</a>
+                <hr class="divider">
 
-        <a href="courses.html">التعليم</a>
+                <div class="product-purchase-section">
+                    <div class="price-box">
+                        <span class="price-label">السعر:</span>
+                        <span id="productPrice" class="main-price">...</span>
+                    </div>
 
-        <a href="shop.html">المتجر</a>
+                    <div class="quantity-box">
+                        <label for="productQuantity">الكمية:</label>
+                        <input type="number" id="productQuantity" value="1" min="1" max="99">
+                    </div>
+                    
+                    <div class="action-buttons">
+                        <a href="#" id="checkoutBtn" class="checkout-btn">💳 شراء المنتج الآن</a>
+                        <a href="#" id="cartBtn" class="cart-btn">🛒 إضافة إلى السلة</a>
+                        <a href="#" id="livePreviewBtn" class="live-preview-btn">👁️ معاينة حية</a>
+                    </div>
+                </div>
 
-        <a href="login.html">تسجيل الدخول</a>
+                <div class="share-product">
+                    <h4>مشاركة المنتج:</h4>
+                    <div class="share-links">
+                        <a href="#" class="share-link fb">Facebook</a>
+                        <a href="#" class="share-link x">X</a>
+                        <a href="#" class="share-link ln">LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-    </nav>
+        <section class="product-tabs-section">
+            <div class="tabs-header">
+                <button class="tab-button active" data-tab="desc-tab">📄 الوصف</button>
+                <button class="tab-button" data-tab="specs-tab">⚙️ المواصفات</button>
+                <button class="tab-button" data-tab="reviews-tab">⭐ التقييمات</button>
+                <button class="tab-button" data-tab="files-tab">📦 الملفات المرفقة</button>
+            </div>
 
-</header>
+            <div class="tabs-content">
+                <div id="desc-tab" class="tab-panel active">
+                    <h3>وصف المنتج</h3>
+                    <p id="tabDescText">جاري تحميل الوصف...</p>
+                </div>
 
-<section class="hero">
+                <div id="specs-tab" class="tab-panel">
+                    <h3>المواصفات الفنية</h3>
+                    <ul class="specs-list" id="tabSpecsList"></ul>
+                    <div class="product-extra-info" id="tabExtraInfo"></div>
+                </div>
 
-    <div class="hero-content">
+                <div id="reviews-tab" class="tab-panel">
+                    <h3>آراء المشترين</h3>
+                    <div class="reviews-container" id="tabReviewsContainer"></div>
+                </div>
 
-        <h2>متجر Torrema</h2>
+                <div id="files-tab" class="tab-panel">
+                    <h3>الملفات المتضمنة في حزمة التحميل</h3>
+                    <ul class="files-list" id="tabFilesList"></ul>
+                </div>
+            </div>
+        </section>
 
-        <p>
+        <section class="related-products-section">
+            <h2>منتجات مشابهة قد تنال إعجابك</h2>
+            <div class="products-grid" id="relatedProductsGrid"></div>
+        </section>
+    </main>
 
-            اشترِ أفضل الأكواد البرمجية والقوالب والدورات الاحترافية.
+    <footer>
+        <p>© 2026 Torrema - جميع الحقوق محفوظة.</p>
+    </footer>
 
-        </p>
-
-    </div>
-
-</section>
-
-<section class="services">
-
-    <div class="service-card">
-
-        <h3>💻 قالب موقع احترافي</h3>
-
-        <p>السعر: 20$</p>
-
-        <button class="buy-btn">
-
-            شراء الآن
-
-        </button>
-
-    </div>
-
-    <div class="service-card">
-
-        <h3>📱 مشروع تطبيق Flutter</h3>
-
-        <p>السعر: 35$</p>
-
-        <button class="buy-btn">
-
-            شراء الآن
-
-        </button>
-
-    </div>
-
-    <div class="service-card">
-
-        <h3>🎓 دورة JavaScript</h3>
-
-        <p>السعر: 15$</p>
-
-        <button class="buy-btn">
-
-            شراء الآن
-
-        </button>
-
-    </div>
-
-</section>
-
-<footer>
-
-    <p>
-
-        © 2026 Torrema
-
-    </p>
-
-</footer>
-
-<script src="js/script.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/product.js"></script>
 
 </body>
 
